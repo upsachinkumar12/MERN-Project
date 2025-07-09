@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./auth.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserData } from "../../context/UserContext";
-//import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Verify = () => {
   const [otp, setOtp] = useState("");
@@ -31,10 +31,10 @@ const Verify = () => {
             onChange={(e) => setOtp(e.target.value)}
             required
           />
-          {/* <ReCAPTCHA
+          <ReCAPTCHA
             sitekey=" 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
             onChange={onChange}
-          /> */}
+          />
           ,
           {show && (
             <button disabled={btnLoading} type="submit" className="common-btn">
